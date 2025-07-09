@@ -1,0 +1,79 @@
+import { Button } from "@/components/ui/button"
+import StatCard from "./StatCard";
+
+const CTASection = () => {
+
+    const ctaData = {
+  "title": "Start Your Crypto Journey with Bulipe Exchange Today!",
+  "subtitle": "Join Coinzy and simplify your cryptocurrency journey!",
+  "statistics": [
+    {
+      "id": 1,
+      "icon": "trending-up",
+      "label": "24h Volume",
+      "value": "$12.5M",
+      "iconColor": "text-orange-500"
+    },
+    {
+      "id": 2,
+      "icon": "bar-chart-3",
+      "label": "Total Value Locked",
+      "value": "$1.2B",
+      "iconColor": "text-orange-500"
+    },
+    {
+      "id": 3,
+      "icon": "trending-up",
+      "label": "Total Trades",
+      "value": "125K",
+      "iconColor": "text-orange-500"
+    }
+  ],
+  "cta": {
+    "text": "Get Started",
+    "href": "/signup"
+  }
+}
+
+  return (
+    <section className="bg-black py-16 px-4 relative overflow-hidden">
+      {/* Background gradient blur */}
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-orange-500/40 via-purple-500/30 to-pink-500/30 rounded-full blur-3xl"></div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
+            {ctaData.title}
+          </h1>
+          <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">{ctaData.subtitle}</p>
+        </div>
+
+        {/* Statistics Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+          {ctaData.statistics.map((stat) => (
+            <StatCard
+              key={stat.id}
+              icon={stat.icon as keyof typeof iconMap}
+              label={stat.label}
+              value={stat.value}
+              iconColor={stat.iconColor}
+            />
+          ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center">
+          <Button
+            size="lg"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          >
+            {ctaData.cta.text}
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default CTASection;
