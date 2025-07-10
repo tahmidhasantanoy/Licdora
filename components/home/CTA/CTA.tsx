@@ -1,7 +1,15 @@
 import { Button } from "@/components/ui/button"
 import StatCard from "./StatCard";
+import { Section } from "lucide-react";
+import SectionHeader from "@/components/shared components/sectionHeader";
 
 const CTASection = () => {
+
+  const sectionHeaderData = {
+    "sectionTitle": "Start Your Crypto Journey with Bulipe Exchange Today!",
+    "sectionDescription": "Join Coinzy and simplify your cryptocurrency journey!",
+    "isCentered": true
+  }
 
     const ctaData = {
   "title": "Start Your Crypto Journey with Bulipe Exchange Today!",
@@ -42,12 +50,7 @@ const CTASection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
-            {ctaData.title}
-          </h1>
-          <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">{ctaData.subtitle}</p>
-        </div>
+        <SectionHeader sectionHeaderData={sectionHeaderData} />
 
         {/* Statistics Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">

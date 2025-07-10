@@ -29,8 +29,10 @@ const StatisticsCard =({
         <Icon className="w-12 h-12 text-white" />
       </div>
       <div className="flex flex-col items-center">
-        <h3 className="text-4xl font-bold text-white">{value}</h3>
-        <p className="text-[#BDBDBD] w-42 h-8 opacity-100 font-poppins(add fonts) font-normal text-xl leading-[32px] tracking-[0%]">{label}</p>
+        {/* font-medium text-[56px] leading-[72px] tracking-[-4%] font-[Poppins]*/}
+        <h3 className="font-medium text-6xl leading-[72px] tracking-[-4%] bg-gradient-to-t to-white from-[#999999] bg-clip-text text-transparent mt-6 mb-4">{value}</h3>
+        {/* font-normal text-[20px] leading-[32px] font-[Poppins] */}
+        <p className="font-normal text-xl leading-8 text-[#BDBDBD] h-8 (add fonts)">{label}</p>
       </div>
     </div>
   )
