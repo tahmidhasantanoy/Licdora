@@ -92,7 +92,7 @@ const JoinNowBanner = () => {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center mb-12">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight max-w-5xl mx-auto">
+          <h1 className="font-bold text-6xl leading-16 md:text-3xl lg:text-4xl xl:text-5xl text-white text-center tracking-tight">
             {showcaseData.title}
           </h1>
         </div>

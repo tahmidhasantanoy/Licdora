@@ -45,15 +45,13 @@ const CTASection = () => {
 
   return (
     <section className="bg-black py-16 px-4 relative overflow-hidden">
-      {/* Background gradient blur */}
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-orange-500/40 via-purple-500/30 to-pink-500/30 rounded-full blur-3xl"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <SectionHeader sectionHeaderData={sectionHeaderData} />
 
         {/* Statistics Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center my-14">
           {ctaData.statistics.map((stat) => (
             <StatCard
               key={stat.id}

@@ -21,21 +21,20 @@ const StatCard = ({
 }) => {
   const Icon = iconMap[icon]
 
-  /* 
-  width: 138.65625;
-height: 120;
-angle: 0 deg;
-opacity: 1;
-
-  */
-
   return (
-    <Card className="bg-white w-36 h-32 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <div className="flex items-start gap-3 mb-3">
-        <Icon className={`w-5 h-5 ${iconColor} mt-1`} />
-        <div className="text-gray-600 text-sm font-medium">{label}</div>
+    <Card className="bg-white w-[8.5rem] h-[7.5rem] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div>
+        <div className="flex items-center gap-1">
+          <Icon className={`w-5 h-5 ${iconColor}`} />
+          <div className="font-normal text-sm text-[#6B7280] leading-4">
+            {label}
+          </div>
       </div>
-      <div className="text-2xl md:text-3xl font-bold text-gray-900">{value}</div>
+
+      <div className="flex justify-center items-center h-full">
+        <p className="font-semibold text-2xl md:text-3xl leading-8 text-black">{value}</p>
+      </div>
+      </div>
     </Card>
   )
 }
