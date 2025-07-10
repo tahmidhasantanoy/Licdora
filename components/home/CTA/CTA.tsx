@@ -1,7 +1,8 @@
-import { Button } from "@/components/ui/button"
+"use client";
+
 import StatCard from "./StatCard";
-import { Section } from "lucide-react";
 import SectionHeader from "@/components/shared components/sectionHeader";
+import Button from "@/components/ui/Button/Button";
 
 const CTASection = () => {
 
@@ -65,12 +66,23 @@ const CTASection = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button
+          {/* <Button
             size="lg"
             className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             {ctaData.cta.text}
-          </Button>
+          </Button> */}
+          <Button
+            label={ctaData.cta.text}
+            variant={"primary"}
+            type="button"
+            disable={false}
+            handleFunc={() => {
+              console.log("CTA Button clicked");
+              // Implement your logic to navigate to the signup page or perform any action
+            }
+          }
+          ></Button>
         </div>
       </div>
     </section>
