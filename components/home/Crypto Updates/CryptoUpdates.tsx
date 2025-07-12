@@ -1,8 +1,8 @@
-import BlogCard from "./BlogCard"
+import CryptoClient from "./CryptoClient";
 
 const CryptoUpdates = () => {
 
-    const blogData = {
+  const blogData = {
     "title": "Latest Crypto Insights",
     "cards": [
         {
@@ -39,24 +39,11 @@ const CryptoUpdates = () => {
         },
     ] 
         }
-
+     
   return (
     <section className="bg-black py-16 px-4">
       <div className="max-w-7xl mx-auto">
-
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {blogData.cards.map((card) => (
-            <BlogCard
-              key={card.id}
-              image={card.image}
-              date={card.date}
-              category={card.category}
-              title={card.title}
-              categoryColor={card.categoryColor}
-            />
-          ))}
-        </div>
+        <CryptoClient blogsData={blogData?.cards} />
       </div>
     </section>
   )

@@ -64,7 +64,7 @@ const CTASection = () => {
           </linearGradient>
         </defs>
         <path d="M-10,80 Q250,0 510,80 L510,125 L-10,125 Z" fill="url(#grad1)" />
-        {/* top left = 510,  bottom left = 510*, bottom right = -10, top right = */}
+        {/* top left = 510,  bottom left = 510*, bottom right = -10, top right =M-10 */}
       </svg>
     </div>
       {/* End Background SVG */}

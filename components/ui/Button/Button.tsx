@@ -19,9 +19,6 @@ interface ButtonProps {
 
 const Button = ({label,handleFunc,variant,type,disable} : ButtonProps) => {
 
-    console.log(handleFunc, "onClick function from Button component");
-    console.log(variant);
-
     // ()=>{
     //         console.log("See more clicked");
     //     // Implement your logic to fetch more posts or navigate to another page

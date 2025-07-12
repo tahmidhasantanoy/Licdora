@@ -46,9 +46,8 @@ const BlogCard = ({
         
         
           return (
-            /* w-[392px] h-[517px] pt-4 pr-4 pb-8 pl-4 gap-[24px] rounded-[40px] border border-solid */
-            /* Hover work with padding */
-            <div className='group p-0 max-w-sm h-[517px] bg-opacity-80 .hover:bg-gradient-to-br from-red-500 via-orange-500 to-red-600 rounded-[40px]  border border-solid duration-500 .transition-transform transition-all'
+          <div>
+            <div className='group p-0 max-w-sm .h-[517px] bg-opacity-80 .hover:bg-gradient-to-br from-red-500 via-orange-500 to-red-600 rounded-[40px]  border border-solid duration-500 .transition-transform transition-all'
             style={{
               background: `linear-gradient(to bottom, 
                 #FF3C3C 0px, 
@@ -82,6 +81,7 @@ const BlogCard = ({
               <h3 className="font-medium text-white text-xl leading-8">{title}</h3>
             </Card>
         </div>
+          </div>
           )
         }
 
