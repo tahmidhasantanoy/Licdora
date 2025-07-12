@@ -8,6 +8,7 @@ import Containter from "@/components/ui/Containter";
 
 export default function Home() {
   return (
+    <>
     <Containter>
       <Hero />
       <TrendingSection />
@@ -16,5 +17,6 @@ export default function Home() {
       <CTASection />
       <JoinNowBanner />
     </Containter>
+    </>
   );
 }
