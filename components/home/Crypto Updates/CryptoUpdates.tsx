@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import CryptoClient from "./CryptoClient";
 
 const CryptoUpdates = () => {
@@ -43,7 +44,9 @@ const CryptoUpdates = () => {
   return (
     <section className="bg-black py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <CryptoClient blogsData={blogData?.cards} />
+        <Suspense fallback={<p className="text-7xl text-red-600">loading</p>}>
+          <CryptoClient blogsData={blogData?.cards} />
+        </Suspense>
       </div>
     </section>
   )
