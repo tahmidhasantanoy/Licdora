@@ -26,8 +26,7 @@ const ClientNav = () => {
 
 
     return (
-        // Scroll effect isn't working on any color without white
-        <nav className={`${horizontalDistance > 40 ? ".bg-green-700 bg-white": "bg-transparent" } flex justify-between  p-5 fixed w-full top-0 z-50 items-center bg-transparent .transition-transform transition-all duration-700`}>
+        <nav className={`${horizontalDistance > 40 ? "bg-[#3b120f]" : "bg-transparent" } flex justify-between  p-5 fixed w-full top-0 z-50 items-center .transition-transform transition-all duration-700`}>
             <Logo />
             <NavLinks links={leftMenus} />
             <NavLinks links={rightMenus} />

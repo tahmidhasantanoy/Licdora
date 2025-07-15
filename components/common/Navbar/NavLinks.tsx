@@ -16,7 +16,7 @@ const NavLinks = ({links} : NavLinksProps) => {
     return (
         <div  className="flex items-center font-medium gap-4">
             {Array.isArray(links) && links.map((link,index) => 
-                <Link key={index} href={link?.href}>{link?.label}</Link>
+                <Link key={index} href={link?.href} className="text-gray-50/85">{link?.label}</Link>
             )}
         </div>
     );
