@@ -12,7 +12,6 @@ const ClientNav = () => {
         const handleScrollEffect = () => {
             const scrollY = window.scrollY;
             setHorizontalDistance(scrollY);
-            console.log(scrollY);
         }
 
         handleScrollEffect()

@@ -90,7 +90,8 @@ const TrendingSection = () => {
     }
 
   return (
-    <section className="bg-black py-16 px-4">
+    // mergin added for every section spacing = my-24
+    <section className="bg-black py-16 my-24 px-4">
       {/* width problem solved here */}
       <div className=".max-w-7xl mx-auto">
 

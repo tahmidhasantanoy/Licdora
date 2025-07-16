@@ -88,7 +88,8 @@ const JoinNowBanner = () => {
     }
 
   return (
-    <section className="bg-black py-16 px-4">
+    // margin added for every section spacing = mt-14,pb-40
+    <section className="bg-black py-16 mt-14 pb-40 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center mb-12">

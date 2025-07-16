@@ -84,6 +84,12 @@ const CryptoClient = ({blogsData} : blogsDataProps) => {
                 </Button>
             </div>
             )}
+            <button className="relative px-5 py-2 m-2 text-[#9b59b6] text-base border-2 border-[#9b59b6] overflow-hidden group z-10 bg-transparent transition-all duration-300">
+  <span className="absolute inset-0 w-0 bg-[#9b59b6] transition-all duration-300 group-hover:w-full z-[-1]"></span>
+  <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+    Border Reveal
+  </span>
+</button>
       </div>
     );
 };

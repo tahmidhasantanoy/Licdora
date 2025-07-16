@@ -19,7 +19,7 @@ export const leftMenus = [
 
 export const rightMenus = [
     {
-        label :"Search ",
+        label :"Search",
         href : "/search"
     },
     {

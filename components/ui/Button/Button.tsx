@@ -11,7 +11,7 @@
 interface ButtonProps {
     label : string;
     // onClick : (param : string) => string;
-    handleFunc : () => void;
+    handleFunc? : () => void;
     variant : "primary" | "secondary" | "danger"; // This is a union of string literal types
     type? : "button" | "submit" | "reset"; // Optional prop with union type
     disable? : boolean; // Optional prop with boolean
@@ -25,7 +25,7 @@ const Button = ({label,handleFunc,variant,type,disable} : ButtonProps) => {
     //     } 'onClick function from Button component
 
 
-    const base = "w-44 h-12 px-6 py-3 text-black text-sm rounded-md transition-all duration-200 gap-3 rounded-xl .rounded-3xl"
+    const base = "w-44 h-12 px-6 py-3 text-black text-sm transition-all duration-200 gap-3 .rounded-xl rounded-3xl"
     const variants = {
         primary: "bg-[#DA6239] hover:bg-orange-800 focus:ring-2 focus:ring-black",
         secondary: "bg-gray-500 hover:bg-gray-600 focus:ring-2 focus:ring-gray-400",

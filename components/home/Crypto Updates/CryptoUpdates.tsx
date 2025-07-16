@@ -42,7 +42,8 @@ const CryptoUpdates = () => {
         }
      
   return (
-    <section className="bg-black py-16 px-4">
+    // margin added for every section spacing = my-16
+    <section className="bg-black py-16 my-16 px-4">
       <div className="max-w-7xl mx-auto">
         <Suspense fallback={<p className="text-7xl text-red-600">loading</p>}>
           <CryptoClient blogsData={blogData?.cards} />
