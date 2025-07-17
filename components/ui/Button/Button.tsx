@@ -27,7 +27,7 @@ const Button = ({label,handleFunc,variant,type,disable} : ButtonProps) => {
 
     const base = "w-44 h-12 px-6 py-3 text-black text-sm transition-all duration-200 gap-3 .rounded-xl rounded-3xl"
     const variants = {
-        primary: "bg-[#DA6239] hover:bg-orange-800 focus:ring-2 focus:ring-black",
+        primary: "bg-[#DA6239] hover:bg-orange-800 hover:text-white duration-500 focus:ring-2 focus:ring-black",
         secondary: "bg-gray-500 hover:bg-gray-600 focus:ring-2 focus:ring-gray-400",
         danger: "bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-400",
     }

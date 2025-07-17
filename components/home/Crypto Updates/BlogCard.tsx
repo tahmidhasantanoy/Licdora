@@ -44,22 +44,21 @@ const BlogCard = ({
             </div>
           )
         
-        
           return (
           <div>
-            <div className='group p-0 max-w-sm .h-[517px] bg-opacity-80 .hover:bg-gradient-to-br from-red-500 via-orange-500 to-red-600 rounded-[40px]  border border-solid duration-500 .transition-transform transition-all'
-            style={{
-              background: `linear-gradient(to bottom, 
-                #FF3C3C 0px, 
-                #FF3C3C 80px, 
-                rgba(94, 86, 91, 0.6) 80px, 
-                rgba(94, 86, 91, 0.6) 120px,
-                #FF3C3C 120px, 
-                #FF3C3C 100%)`,
-              // padding: '1px', // Thick border here
-              borderRadius: '40px',
-              }}>
-                <Card className="bg-black border-gray-800 rounded-3xl p-6 group-hover:m-[1px]  transition-colors">
+            <div className='group p-0 .max-w-sm bg-opacity-80 rounded-[40px]  border border-solid duration-1000 transition-all'
+            
+              style={{
+              background : `linear-gradient(180deg, 
+                rgba(255, 58, 41, 0.7) 0%, 
+                rgba(255, 58, 41, 0.4) 30%, 
+                rgba(255, 58, 41, 0.2) 49.99%, 
+                rgba(255, 58, 41, 0.4) 70%, 
+                rgba(255, 58, 41, 0.7) 100%)`,
+                borderRadius : '24px',
+            }}
+            >
+            <Card className="bg-black border-gray-800 rounded-3xl p-6 group-hover:m-[1px]  transition-colors">
               <div className="relative w-full h-48 md:h-56 mb-4 rounded-2xl overflow-hidden">
                 <Image src={cardImage || "/placeholder.svg"}
                   width={360}
@@ -81,8 +80,8 @@ const BlogCard = ({
               <h3 className="font-medium text-white text-xl leading-8">{title}</h3>
             </Card>
         </div>
-          </div>
+      </div>
           )
         }
 
-export default BlogCard;
+        export default BlogCard;
