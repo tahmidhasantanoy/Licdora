@@ -14,9 +14,15 @@ interface NavLinksProps {
     links : link[]
 }
 
+interface IExpandingSearchProps {
+    size?: "xs" | "sm" | "md";
+    color?: "blue" | "purple" | "green" | "gray" | "gradient" | "outline" | "white";
+    featured?: boolean;
+}
+
 const NavLinks = ({links} : NavLinksProps) => {
 
-function ExpandingSearchComponent({ size = "sm", color = "blue", featured = false }: ExpandingSearchProps) {
+function ExpandingSearchComponent({ size = "sm", color = "blue", featured = false }: IExpandingSearchProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [searchValue, setSearchValue] = useState("")
 
@@ -69,9 +75,9 @@ function ExpandingSearchComponent({ size = "sm", color = "blue", featured = fals
         }
       case "green":
         return {
-          bg: "bg-green-500 hover:bg-green-600",
+          bg: "bg-transparent hover:bg-transparent",
           text: "text-white",
-          placeholder: "placeholder-green-200",
+          placeholder: "placeholder-pink-100",
         }
       case "gray":
         return {
@@ -112,20 +118,20 @@ function ExpandingSearchComponent({ size = "sm", color = "blue", featured = fals
   return (
     <div className="relative">
       <div
-        className={`p-[8px_10px] border border-solid   flex items-center rounded-full transition-all duration-500 ease-out bg-red-500 ${colorClasses.bg} ${
+        className={`absolute right-0 top-0 p-[8px_10px] z-10 border border-gray-50/90   flex items-center rounded-full transition-all duration-500 ease-out bg-transparent ${colorClasses.bg} ${
           isExpanded ? `${sizeClasses.expanded} px-3 py-2` : `w-40 h-12 ${sizeClasses.collapsed} cursor-pointer hover:scale-110`
         } ${featured ? "shadow-lg hover:shadow-xl" : ""}`}
         onClick={() => !isExpanded && setIsExpanded(true)}
       >
-        <Search className={`${sizeClasses.icon} ${colorClasses.text} flex-shrink-0 ${isExpanded ? "" : "mx-auto"}`} />
+        <Search className={`${sizeClasses.icon} ${colorClasses.text} flex-shrink-0 ${isExpanded ? "" : "mx-start"}`} />
         <input
           type="text"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           className={`bg-transparent ${colorClasses.text} ${colorClasses.placeholder} outline-none transition-all duration-500 ${sizeClasses.input} ${
-            isExpanded ? "w-full ml-2 opacity-100" : "w-0 opacity-0"
+            isExpanded ? "w-full ml-2 opacity-100" : "w-fit text-md opacity-100 mx-2 mt-0.5"
           }`}
-          placeholder="Search..."
+          placeholder={`${isExpanded ? "Search token..." : "Search"}`}
           onBlur={() => !searchValue && setIsExpanded(false)}
         />
         {isExpanded && searchValue && (
@@ -148,15 +154,16 @@ function ExpandingSearchComponent({ size = "sm", color = "blue", featured = fals
     </div>
   )
 }
-
-
     
     return (
-        <div className="flex items-center font-medium gap-4">
+      // Here i stop item-center to avoid center alignment of search and wallet buttons
+        <div className="flex .items-center font-medium gap-4">
             {Array.isArray(links) && links.map((link,index) =>
             link?.label == "Search" ?
             (
-                <ExpandingSearchComponent key={index} size="md" color="green" />
+                <div key={index} className="w-60 .ml-20">
+                  <ExpandingSearchComponent key={index} size="md" color="green" />
+                </div>
             ) 
             :
             link?.label == "Connect Wallet" ? (

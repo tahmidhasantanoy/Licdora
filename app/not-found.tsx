@@ -12,7 +12,7 @@ const NotFound =() => {
         href="/"
         className="bg-[#830707] hover:bg-red-700 transition-colors text-white py-2 px-6 rounded-full text-sm font-medium shadow-lg"
       >
-        Go to Homepage
+        Back to Homepage
       </Link>
     </div>
   );
